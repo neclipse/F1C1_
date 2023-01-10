@@ -120,13 +120,13 @@ header .mobile {
   }
 
   header .content {
-    padding: .5rem 0;
+    padding: .75rem 0 0.5rem 0;
   }
 
   header .mobile ul {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
   }
 
@@ -321,7 +321,7 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 525px) {
   #features-section {
     flex-flow: column;
     padding: 0;
