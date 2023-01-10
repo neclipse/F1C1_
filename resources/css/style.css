@@ -277,11 +277,10 @@ header .mobile {
 }
 
 .feature .content {
-  height: 7.1875rem;
+  margin: 2.5rem 0 auto;
 }
 
 .feature h2 {
-  margin-top: 2.5rem;
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
@@ -290,16 +289,30 @@ header .mobile {
 
 .feature h3 {
   font-size: 1rem;
+  padding-bottom: 1rem;
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
 }
 
 @media only screen and (max-width: 890px) {
+  #features-section {
+    padding: 1rem;
+    background-color: #f3f3f3;
+  }
+
+  .feature {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 0px .5rem;
+    background-color: white;
+  }
+
   .feature h2 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.3;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   .feature h3 {
@@ -388,11 +401,15 @@ header .mobile {
 }
 
 #quotes-section .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 5rem 0;
 }
 
 #quotes-section .quote {
-  padding-right: 1.875rem;
+  text-align: center;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
   line-height: 1.1;
@@ -402,22 +419,40 @@ header .mobile {
 
 #quotes-section .quote-citation {
   height: 1.875rem;
+  padding-left: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
-  #quotes-section content {
-    padding: 1.875rem .625rem;
+@media only screen and (max-width: 1024px) {
+  #quotes-section .content {
+    padding: 2.5rem 1rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
-    margin: auto;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  #quotes-section .content {
+    padding: 1.875rem 3rem;
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  #quotes-section .quote-citation {
+    display: block;
+    padding-top: 1rem;
+    padding-left: 0;
   }
 }
 
