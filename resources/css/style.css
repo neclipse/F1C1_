@@ -34,6 +34,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 890px) {
+  .main-content {
+    top: 4.5625rem;
+  }
+}
+
 /* Header */
 
 header {
@@ -51,6 +57,8 @@ header .content {
 
 header .logo {
   flex: 1;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  font-size: 1.5rem;
 }
 
 header nav ul {
@@ -59,6 +67,9 @@ header nav ul {
 
 nav li {
   padding-left: 3.5rem;
+  font-family: "Roboto";
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 nav a {
@@ -70,18 +81,39 @@ nav a {
 
 header .icon {
   width: 1rem;
-  padding-left: .75rem;
+  padding-left: 0.75rem;
+}
+
+header .tablet {
+  display: none;
 }
 
 header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
-  header .desktop {
-    display: none;
+
+
+
+@media only screen and (max-width: 890px) {
+  header .tablet {
+    display: block;
+    padding-left: 3.5rem;
   }
 
+  header  .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop, header .tablet {
+    display: none;
+  }
   header .mobile {
     display: block;
     width: 100%;
@@ -117,10 +149,16 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image:url(../images/banner-landingpage.jpg);
+  background-repeat: non-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #sign-up-cta {
   padding: 0 5rem 2.5rem 5rem;
+  margin-top: 10.625rem;
+  margin-left: 6.25rem; 
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
@@ -137,6 +175,7 @@ header .mobile {
 
 #sign-up-cta h1 {
   font-size: 3.125rem;
+
 }
 
 #sign-up-cta h2 {
@@ -161,7 +200,7 @@ header .mobile {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 890px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -170,6 +209,8 @@ header .mobile {
 
   #sign-up-cta {
     position: static;
+    margin-top: 0;
+    margin-left: 0; 
     width: auto;
     height: auto;
     background-color: transparent;
@@ -193,7 +234,7 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 890px) {
   #sign-up-section {
     height: 20rem;
   }
@@ -218,18 +259,29 @@ header .mobile {
 
 .feature {
   flex: 1;
+  box-sizing: border-box;
   padding: 2rem;
-  margin: 0px 1.25rem;
+  margin: 0px 1.1875rem;
   background-color: white;
 }
 
 .feature .image-container {
-  width: 90%;
+  width: auto;
   height: 65%;
-  margin: 0 auto;
+  margin: 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.feature .content {
+  height: 7.1875rem;
 }
 
 .feature h2 {
+  margin-top: 2.5rem;
   padding-bottom: .5rem;
   font-size: 2.25rem;
   font-weight: bold;
@@ -294,6 +346,7 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
@@ -334,11 +387,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -347,7 +400,7 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
@@ -385,7 +438,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 760px) {
   footer .content {
     font-size: .625rem;
   }
